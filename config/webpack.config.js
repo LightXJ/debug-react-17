@@ -325,6 +325,11 @@ module.exports = function (webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
+        'react': path.resolve(__dirname, '../src/react/packages/react'),
+        'react-dom': path.resolve(__dirname, '../src/react/packages/react-dom'),
+        'shared': path.resolve(__dirname, '../src/react/packages/shared'),
+        'react-reconciler': path.resolve(__dirname, '../src/react/packages/react-reconciler'),
+        "legacy-events": path.resolve(__dirname, "../src/react/packages/legacy-events"),
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
